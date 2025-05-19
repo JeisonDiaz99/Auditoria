@@ -42,6 +42,9 @@ def index():
                 json={
                     "text": text,
                     "file_type": processed_data["file_type"]
+                },
+                files={
+                    "file": (pdf_file.filename, pdf_file.read(), pdf_file.content_type)
                 }
             )
             # Process the text as needed
